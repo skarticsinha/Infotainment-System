@@ -17,6 +17,9 @@ qt_add_qml_module(appinfotainment
     VERSION 1.0
     QML_FILES
         Main.qml
+        QML_FILES ui/bottomBar/BottomBar.qml
+        QML_FILES ui/rightScreen/RightScreen.qml
+        QML_FILES ui/leftScreen/LeftScreen.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
