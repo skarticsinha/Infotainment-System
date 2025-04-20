@@ -9,5 +9,13 @@ Rectangle {
         bottom: bottomBar.top
         top: parent.top
     }
-    color: "blue"
+    color: "#f5f5f5"
+
+    Image {
+        id: carRender
+        anchors.centerIn: parent
+        width: parent.width
+        fillMode: Image.PreserveAspectFit
+        source: "qrc:/ui/assets/car_render.jpeg"
+    }
 }
