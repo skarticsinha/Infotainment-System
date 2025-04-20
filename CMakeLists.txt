@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(infotainment VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.2 REQUIRED COMPONENTS Quick)
@@ -20,6 +21,7 @@ qt_add_qml_module(appinfotainment
         QML_FILES ui/bottomBar/BottomBar.qml
         QML_FILES ui/rightScreen/RightScreen.qml
         QML_FILES ui/leftScreen/LeftScreen.qml
+        RESOURCES assets.qrc
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

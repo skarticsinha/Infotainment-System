@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ui/assets/car_render.jpeg</file>
+        <file>ui/assets/electric-car.png</file>
+    </qresource>
+</RCC>
