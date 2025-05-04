@@ -13,9 +13,9 @@ Rectangle {
 
     Image {
         id: carRender
-        anchors.centerIn: parent
-        width: parent.width
-        fillMode: Image.PreserveAspectFit
         source: "qrc:/ui/assets/car_render.jpeg"
+        anchors.centerIn: parent
+        width: parent.width * 1.1
+        fillMode: Image.PreserveAspectFit
     }
 }
