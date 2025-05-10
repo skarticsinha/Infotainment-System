@@ -92,5 +92,86 @@ Rectangle {
     }
 
 
+    Image {
+        id: lockIcon
+        source: ( systemHandler.carLocked ? "qrc:/ui/assets/lock.png" : "qrc:/ui/assets/unlock.png")
+        anchors {
+            left: parent.left
+            top: parent.top
+            margins: 10
+        }
+        width: parent.width / 46
+        fillMode: Image.PreserveAspectFit
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: systemHandler.setCarLocked( !systemHandler.carLocked )
+        }
+    }
+
+    Text {
+        id: dateTimeDisplay
+        text: systemHandler.currentTime
+        anchors {
+            left: lockIcon.right
+            leftMargin: 30
+            bottom: lockIcon.bottom
+        }
+        font.pixelSize: 12
+        font.weight: 500
+        color: "black"
+    }
+
+    Text {
+        id: outdoorTempratureDisplay
+        text: systemHandler.outdoorTemp + "°F"
+        anchors {
+            left: dateTimeDisplay.right
+            leftMargin: 30
+            bottom: lockIcon.bottom
+        }
+        font.pixelSize: 12
+        font.weight: 500
+        color: "black"
+    }
+
+    Image {
+        id: userIcon
+        source: "qrc:/ui/assets/user.png"
+        anchors {
+            left: outdoorTempratureDisplay.right
+            // bottom: lockIcon.bottom
+            top: parent.top
+            margins: 10
+            leftMargin: 30
+        }
+        width: parent.width / 46
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Text {
+        id: userName
+        text: systemHandler.userName
+        anchors {
+            left: userIcon.right
+            leftMargin: 5
+            bottom: lockIcon.bottom
+        }
+        font.pixelSize: 12
+        font.weight: 500
+        color: "black"
+    }
+
+    NavigationSearchBox {
+        id: navSearchBox
+        anchors {
+            left: lockIcon.left
+            top: lockIcon.bottom
+            topMargin: 15
+        }
+        width: parent.width * 1/3
+        height: parent.height * 1/14
+    }
+
 
 }

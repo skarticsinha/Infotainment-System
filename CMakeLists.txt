@@ -22,6 +22,8 @@ qt_add_qml_module(appinfotainment
         QML_FILES ui/rightScreen/RightScreen.qml
         QML_FILES ui/leftScreen/LeftScreen.qml
         RESOURCES assets.qrc
+        SOURCES controllers/system.h controllers/system.cpp
+        QML_FILES ui/rightScreen/NavigationSearchBox.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

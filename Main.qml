@@ -1,4 +1,5 @@
-import QtQuick 2.15
+import QtQuick
+import QtQuick.Controls
 import "ui/bottomBar"
 import "ui/rightScreen"
 import "ui/leftScreen"
@@ -20,4 +21,5 @@ Window {
     BottomBar {
         id: bottomBar
     }
+
 }
